@@ -6,10 +6,13 @@
 */
 
 Console.WriteLine("Введите пятизначное число: ");
-int num = int.Parse(Console.ReadLine());
-int[] array = int num;
+string num = (Console.ReadLine());
 
-if (palindrom(num))
+if (num.Length > 5)
+{
+    Console.WriteLine("Ошибка. Введите пятизначное число");
+}
+else if (palindrom(num))
 {
     Console.WriteLine("Да");
 }
@@ -19,9 +22,9 @@ else
 }
 
 
-bool palindrom(int[] array)
+bool palindrom(string number)
 {
-    if (array[0] == array[4] && array[1] == array[3])
+    if (number[0] == number[4] && number[1] == number[3])
     {
         return true;
     }
